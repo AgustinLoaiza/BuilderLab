@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "BuilderLab",
+			"Path": "C:\\Users\\User\\Desktop\\BuilderLab_Agustin_Loaiza\\BuilderLab\\Source\\BuilderLab.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "BuilderLabEditor",
+			"Path": "C:\\Users\\User\\Desktop\\BuilderLab_Agustin_Loaiza\\BuilderLab\\Source\\BuilderLabEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

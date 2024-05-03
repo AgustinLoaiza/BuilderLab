@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"C:\\Users\\User\\Desktop\\BuilderLab_Agustin_Loaiza\\BuilderLab\\Source\\BuilderLab\\BuilderLab.Build.cs",
+		"C:\\Users\\User\\Desktop\\BuilderLab_Agustin_Loaiza\\BuilderLab\\Source\\BuilderLab.Target.cs",
+		"C:\\Users\\User\\Desktop\\BuilderLab_Agustin_Loaiza\\BuilderLab\\Source\\BuilderLabEditor.Target.cs"
+	],
+	"EngineVersion": "4.27.2"
+}

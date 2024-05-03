@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\BuilderLab.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{0EE64415-3AAC-49EC-A9F4-C49CB754F5A1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BuilderLab.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\BuilderLabEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{722081FF-CDBE-4BCB-A553-4801F9F2D0D1}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\BuilderLab">
+      <UniqueIdentifier>{0D9AFDC9-DC4D-48F0-9207-0AC1C67FEFEC}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\BuilderLab\BuilderLab.Build.cs">
+      <Filter>Source\BuilderLab</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\BuilderLab\BuilderLab.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\BuilderLab.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\BuilderLabGameMode.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\BuilderLabGameMode.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\BuilderLabPawn.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\BuilderLabPawn.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\BuilderLabProjectile.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\BuilderLabProjectile.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
