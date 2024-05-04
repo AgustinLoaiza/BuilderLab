@@ -1,0 +1,3 @@
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Definitions.BuilderLab.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\Paquetero.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Paquetero.generated.h
