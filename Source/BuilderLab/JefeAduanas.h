@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Paquetero.h"
 #include "JefeAduanas.generated.h"
 
 UCLASS()
@@ -22,5 +23,10 @@ protected:
 public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
+
+	void ConstruirPaquete(FVector ubicacionPaquete, FRotator Rotacion);
+	void SetPaquetero(AActor* Embalador);
+	class APaquete* GetPaquete();
+	IPaquetero* Paquetero;
 
 };

@@ -18,6 +18,7 @@ void EmptyLinkFunctionForGeneratedCodePaquete() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_BuilderLab();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
+	BUILDERLAB_API UClass* Z_Construct_UClass_UPlanosPaquete_NoRegister();
 // End Cross Module References
 	void APaquete::StaticRegisterNativesAPaquete()
 	{
@@ -41,6 +42,7 @@ void EmptyLinkFunctionForGeneratedCodePaquete() {}
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MallaPaquete;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -73,6 +75,9 @@ void EmptyLinkFunctionForGeneratedCodePaquete() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APaquete_Statics::NewProp_Capsula,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_APaquete_Statics::NewProp_MallaPaquete,
 	};
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_APaquete_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UPlanosPaquete_NoRegister, (int32)VTABLE_OFFSET(APaquete, IPlanosPaquete), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APaquete_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APaquete>::IsAbstract,
 	};
@@ -83,11 +88,11 @@ void EmptyLinkFunctionForGeneratedCodePaquete() {}
 		DependentSingletons,
 		nullptr,
 		Z_Construct_UClass_APaquete_Statics::PropPointers,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		UE_ARRAY_COUNT(Z_Construct_UClass_APaquete_Statics::PropPointers),
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_APaquete_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_APaquete_Statics::Class_MetaDataParams))
 	};
@@ -100,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodePaquete() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APaquete, 2288567339);
+	IMPLEMENT_CLASS(APaquete, 471954218);
 	template<> BUILDERLAB_API UClass* StaticClass<APaquete>()
 	{
 		return APaquete::StaticClass();

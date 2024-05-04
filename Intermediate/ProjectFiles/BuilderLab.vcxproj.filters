@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\BuilderLab.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{61998895-B3F0-47AD-929E-AF7E556EEE8F}</UniqueIdentifier>
+      <UniqueIdentifier>{4D629CB6-51F5-4089-9F34-26B67B6A5DBD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BuilderLab.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{666DC4BB-2B81-43A8-B5A0-668593970DFB}</UniqueIdentifier>
+      <UniqueIdentifier>{365960AE-8252-45EB-903D-504A59D761CD}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\BuilderLab">
-      <UniqueIdentifier>{982BBB22-73DE-41D2-BA72-0E51B0781752}</UniqueIdentifier>
+      <UniqueIdentifier>{1FBFF9BC-96AA-468B-A93C-3404167414C7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BuilderLab\BuilderLab.Build.cs">
       <Filter>Source\BuilderLab</Filter>
@@ -73,6 +73,12 @@
     <ClInclude Include="..\..\Source\BuilderLab\ComponenteMunicion.h">
       <Filter>Source\BuilderLab</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\ComponenteVelocidad.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\ComponenteVelocidad.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\BuilderLab\JefeAduanas.cpp">
       <Filter>Source\BuilderLab</Filter>
     </ClCompile>
@@ -97,10 +103,28 @@
     <ClInclude Include="..\..\Source\BuilderLab\Paquetero.h">
       <Filter>Source\BuilderLab</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\PaqueteroBalas.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\PaqueteroBalas.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\PaqueteroVelocidad.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\PaqueteroVelocidad.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\BuilderLab\PlanosPaquete.cpp">
       <Filter>Source\BuilderLab</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BuilderLab\PlanosPaquete.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\Velocidad.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\Velocidad.h">
       <Filter>Source\BuilderLab</Filter>
     </ClInclude>
   </ItemGroup>

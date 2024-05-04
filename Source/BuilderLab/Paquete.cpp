@@ -2,6 +2,8 @@
 
 
 #include "Paquete.h"
+#include "Municion.h"
+#include "Velocidad.h"
 
 // Sets default values
 APaquete::APaquete()
@@ -27,17 +29,50 @@ void APaquete::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	TiempoTranscurrido += DeltaTime;
+	if (TiempoTranscurrido>=5)
+	{
+		BuildCapsula();
+		TiempoTranscurrido = 0;
+	}
+	ubicacionPaquete = GetActorLocation();
 }
 
-//void APaquete::SetMesh(UStaticMeshComponent* MallaPaquete)
-//{
-//}
-//
-//void APaquete::SetCapsulas(FString Capsula)
-//{
-//}
-//
-//void APaquete::BuildCapsula()
-//{
-//}
+void APaquete::SetMesh(UStaticMeshComponent* MallaPaquete)
+{
+	MallaPaquete = MallaPaquete;
+}
+
+void APaquete::SetCapsulas(FString Capsula)
+{
+	Capsula = Capsula;
+}
+
+void APaquete::BuildCapsula()
+{
+	if (Capsula == "Municion")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionGasolinera = ubicacionPaquete + FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AMunicion>(ubicacionGasolinera, FRotator::ZeroRotator);
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Capsula"));
+		}
+	}
+	else if (Capsula == "Velocidad")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionGasolinera = ubicacionPaquete + FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AVelocidad>(ubicacionGasolinera, FRotator::ZeroRotator); 
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Capsula")); 
+		}
+	}
+	else
+	{
+		nullptr;
+	}
+}
 

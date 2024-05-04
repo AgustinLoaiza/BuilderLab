@@ -25,3 +25,29 @@ void AJefeAduanas::Tick(float DeltaTime)
 
 }
 
+void AJefeAduanas::SetPaquetero(AActor* Embalador)
+{
+	Paquetero = Cast<IPaquetero>(Embalador); 
+
+	if (!Paquetero)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("No se puede armar el paquete"));
+	}
+}
+
+APaquete* AJefeAduanas::GetPaquete()
+{
+	if (Paquetero)
+	{
+		return Paquetero->GetPaquete();
+	}
+	return nullptr;
+}
+
+void AJefeAduanas::ConstruirPaquete(FVector ubicacionPaquete, FRotator Rotacion)
+{
+	Paquetero->BuildPaquete(ubicacionPaquete, Rotacion);
+	Paquetero->BuildCapsula();
+	Paquetero->BuildMesh(); 
+}
+
