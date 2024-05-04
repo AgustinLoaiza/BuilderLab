@@ -17,9 +17,100 @@ void EmptyLinkFunctionForGeneratedCodeComponenteVelocidad() {}
 	BUILDERLAB_API UClass* Z_Construct_UClass_UComponenteVelocidad();
 	ENGINE_API UClass* Z_Construct_UClass_UActorComponent();
 	UPackage* Z_Construct_UPackage__Script_BuilderLab();
+	BUILDERLAB_API UClass* Z_Construct_UClass_AVelocidad_NoRegister();
 // End Cross Module References
+	DEFINE_FUNCTION(UComponenteVelocidad::execRemoveFromInventory)
+	{
+		P_GET_OBJECT(AVelocidad,Z_Param_ActorToRemove);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->RemoveFromInventory(Z_Param_ActorToRemove);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(UComponenteVelocidad::execAddToInventory)
+	{
+		P_GET_OBJECT(AVelocidad,Z_Param_ActorToAdd);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		*(int32*)Z_Param__Result=P_THIS->AddToInventory(Z_Param_ActorToAdd);
+		P_NATIVE_END;
+	}
 	void UComponenteVelocidad::StaticRegisterNativesUComponenteVelocidad()
 	{
+		UClass* Class = UComponenteVelocidad::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "AddToInventory", &UComponenteVelocidad::execAddToInventory },
+			{ "RemoveFromInventory", &UComponenteVelocidad::execRemoveFromInventory },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics
+	{
+		struct ComponenteVelocidad_eventAddToInventory_Parms
+		{
+			AVelocidad* ActorToAdd;
+			int32 ReturnValue;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ActorToAdd;
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_ReturnValue;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::NewProp_ActorToAdd = { "ActorToAdd", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ComponenteVelocidad_eventAddToInventory_Parms, ActorToAdd), Z_Construct_UClass_AVelocidad_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ComponenteVelocidad_eventAddToInventory_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::NewProp_ActorToAdd,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::NewProp_ReturnValue,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ComponenteVelocidad.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UComponenteVelocidad, nullptr, "AddToInventory", nullptr, nullptr, sizeof(ComponenteVelocidad_eventAddToInventory_Parms), Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UComponenteVelocidad_AddToInventory()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UComponenteVelocidad_AddToInventory_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics
+	{
+		struct ComponenteVelocidad_eventRemoveFromInventory_Parms
+		{
+			AVelocidad* ActorToRemove;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ActorToRemove;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics::NewProp_ActorToRemove = { "ActorToRemove", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ComponenteVelocidad_eventRemoveFromInventory_Parms, ActorToRemove), Z_Construct_UClass_AVelocidad_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics::NewProp_ActorToRemove,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ComponenteVelocidad.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UComponenteVelocidad, nullptr, "RemoveFromInventory", nullptr, nullptr, sizeof(ComponenteVelocidad_eventRemoveFromInventory_Parms), Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_UComponenteVelocidad_NoRegister()
 	{
@@ -28,15 +119,26 @@ void EmptyLinkFunctionForGeneratedCodeComponenteVelocidad() {}
 	struct Z_Construct_UClass_UComponenteVelocidad_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CurrentInventory_Inner;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentInventory_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FArrayPropertyParams NewProp_CurrentInventory;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
 	UObject* (*const Z_Construct_UClass_UComponenteVelocidad_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_UActorComponent,
 		(UObject* (*)())Z_Construct_UPackage__Script_BuilderLab,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_UComponenteVelocidad_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UComponenteVelocidad_AddToInventory, "AddToInventory" }, // 612973317
+		{ &Z_Construct_UFunction_UComponenteVelocidad_RemoveFromInventory, "RemoveFromInventory" }, // 1222270479
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UComponenteVelocidad_Statics::Class_MetaDataParams[] = {
@@ -46,6 +148,17 @@ void EmptyLinkFunctionForGeneratedCodeComponenteVelocidad() {}
 		{ "ModuleRelativePath", "ComponenteVelocidad.h" },
 	};
 #endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_CurrentInventory_Inner = { "CurrentInventory", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, Z_Construct_UClass_AVelocidad_NoRegister, METADATA_PARAMS(nullptr, 0) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_CurrentInventory_MetaData[] = {
+		{ "ModuleRelativePath", "ComponenteVelocidad.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FArrayPropertyParams Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_CurrentInventory = { "CurrentInventory", nullptr, (EPropertyFlags)0x0010000000000000, UE4CodeGen_Private::EPropertyGenFlags::Array, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UComponenteVelocidad, CurrentInventory), EArrayPropertyFlags::None, METADATA_PARAMS(Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_CurrentInventory_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_CurrentInventory_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UComponenteVelocidad_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_CurrentInventory_Inner,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UComponenteVelocidad_Statics::NewProp_CurrentInventory,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UComponenteVelocidad_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UComponenteVelocidad>::IsAbstract,
 	};
@@ -54,12 +167,12 @@ void EmptyLinkFunctionForGeneratedCodeComponenteVelocidad() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
-		nullptr,
+		FuncInfo,
+		Z_Construct_UClass_UComponenteVelocidad_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
+		UE_ARRAY_COUNT(Z_Construct_UClass_UComponenteVelocidad_Statics::PropPointers),
 		0,
 		0x00B000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_UComponenteVelocidad_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UComponenteVelocidad_Statics::Class_MetaDataParams))
@@ -73,7 +186,7 @@ void EmptyLinkFunctionForGeneratedCodeComponenteVelocidad() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UComponenteVelocidad, 3519316455);
+	IMPLEMENT_CLASS(UComponenteVelocidad, 2632577778);
 	template<> BUILDERLAB_API UClass* StaticClass<UComponenteVelocidad>()
 	{
 		return UComponenteVelocidad::StaticClass();

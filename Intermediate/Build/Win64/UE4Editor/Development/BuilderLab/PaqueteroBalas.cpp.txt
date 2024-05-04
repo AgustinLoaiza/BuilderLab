@@ -1,3 +1,13 @@
 C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Definitions.BuilderLab.h
 C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\PaqueteroBalas.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\Paquetero.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Paquetero.generated.h
 C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\PaqueteroBalas.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\Municion.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Municion.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\Paquete.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\PlanosPaquete.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\PlanosPaquete.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Paquete.generated.h

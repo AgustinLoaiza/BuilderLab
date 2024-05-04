@@ -50,6 +50,10 @@ ABuilderLabPawn::ABuilderLabPawn()
 	GunOffset = FVector(90.f, 0.f, 0.f);
 	FireRate = 0.1f;
 	bCanFire = true;
+
+	//Inicializamos los componentes de actor de las capsulas
+	Municion = CreateDefaultSubobject<UComponenteMunicion>("Municion");
+	Velocidad = CreateDefaultSubobject<UComponenteVelocidad>("Velocidad"); 
 }
 
 void ABuilderLabPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -184,5 +188,21 @@ void ABuilderLabPawn::TakeItemVelocidad(AVelocidad* InventoryItem)
 {
 	InventoryItem->AgarrarVelocidad();
 	Velocidad->AddToInventory(InventoryItem);
+}
+
+void ABuilderLabPawn::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
+{
+	AMunicion* InventoryItemMunicion = Cast<AMunicion>(Other); 
+	if (InventoryItemMunicion != nullptr)
+	{
+		TakeItemMunicion(InventoryItemMunicion); 
+		cargador = 50;
+	}
+	AVelocidad* InventoryItemVelocidad = Cast<AVelocidad>(Other);
+	if (InventoryItemVelocidad != nullptr)
+	{
+		TakeItemVelocidad(InventoryItemVelocidad);
+		MoveSpeed = 2000.0f;
+	}
 }
 

@@ -38,14 +38,14 @@ void APaquete::Tick(float DeltaTime)
 	ubicacionPaquete = GetActorLocation();
 }
 
-void APaquete::SetMesh(UStaticMeshComponent* MallaPaquete)
+void APaquete::SetMesh(UStaticMeshComponent* _MallaPaquete)
 {
-	MallaPaquete = MallaPaquete;
+	MallaPaquete = _MallaPaquete;
 }
 
-void APaquete::SetCapsulas(FString Capsula)
+void APaquete::SetCapsulas(FString _Capsula)
 {
-	Capsula = Capsula;
+	Capsula = _Capsula;
 }
 
 void APaquete::BuildCapsula()

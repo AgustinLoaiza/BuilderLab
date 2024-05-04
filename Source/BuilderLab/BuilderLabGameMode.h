@@ -13,6 +13,17 @@ class ABuilderLabGameMode : public AGameModeBase
 
 public:
 	ABuilderLabGameMode();
+
+private:
+	class AJefeAduanas* JefeAduanas;
+	class APaqueteroBalas* PaqueteroMunicion;
+	class APaqueteroVelocidad* PaqueteroVelocidad;
+
+protected:
+	virtual void BeginPlay() override;
+
+private:
+	virtual void Tick(float DeltaTime) override;
 };
 
 

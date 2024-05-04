@@ -32,7 +32,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void SetMesh(UStaticMeshComponent* MallaPaquete) override;
-	void SetCapsulas(FString Capsula) override;
+	void SetMesh(UStaticMeshComponent* _MallaPaquete) override;
+	void SetCapsulas(FString _Capsula) override;
 	void BuildCapsula();
 };
