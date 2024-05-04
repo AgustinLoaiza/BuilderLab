@@ -22,8 +22,7 @@ private: \
 	friend struct Z_Construct_UClass_APaquete_Statics; \
 public: \
 	DECLARE_CLASS(APaquete, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/BuilderLab"), NO_API) \
-	DECLARE_SERIALIZER(APaquete) \
-	virtual UObject* _getUObject() const override { return const_cast<APaquete*>(this); }
+	DECLARE_SERIALIZER(APaquete)
 
 
 #define BuilderLab_Source_BuilderLab_Paquete_h_13_INCLASS \
@@ -32,8 +31,7 @@ private: \
 	friend struct Z_Construct_UClass_APaquete_Statics; \
 public: \
 	DECLARE_CLASS(APaquete, AActor, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/BuilderLab"), NO_API) \
-	DECLARE_SERIALIZER(APaquete) \
-	virtual UObject* _getUObject() const override { return const_cast<APaquete*>(this); }
+	DECLARE_SERIALIZER(APaquete)
 
 
 #define BuilderLab_Source_BuilderLab_Paquete_h_13_STANDARD_CONSTRUCTORS \

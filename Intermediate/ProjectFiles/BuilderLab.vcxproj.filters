@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\BuilderLab.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{69EBFDEC-623C-43F4-94F9-B11B256E5147}</UniqueIdentifier>
+      <UniqueIdentifier>{61998895-B3F0-47AD-929E-AF7E556EEE8F}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BuilderLab.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{37150524-938F-4AA3-B111-2E6717D258B3}</UniqueIdentifier>
+      <UniqueIdentifier>{666DC4BB-2B81-43A8-B5A0-668593970DFB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,7 +32,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\BuilderLab">
-      <UniqueIdentifier>{E58019CB-D3FF-4464-B736-507CEDC4F4BD}</UniqueIdentifier>
+      <UniqueIdentifier>{982BBB22-73DE-41D2-BA72-0E51B0781752}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\BuilderLab\BuilderLab.Build.cs">
       <Filter>Source\BuilderLab</Filter>
@@ -59,6 +59,30 @@
       <Filter>Source\BuilderLab</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\BuilderLab\BuilderLabProjectile.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\ComponenteGestion.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\ComponenteGestion.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\ComponenteMunicion.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\ComponenteMunicion.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\JefeAduanas.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\JefeAduanas.h">
+      <Filter>Source\BuilderLab</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\BuilderLab\Municion.cpp">
+      <Filter>Source\BuilderLab</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\BuilderLab\Municion.h">
       <Filter>Source\BuilderLab</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\BuilderLab\Paquete.cpp">

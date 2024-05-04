@@ -4,11 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
-#include "PlanosPaquete.h"
+//#include "PlanosPaquete.h"
 #include "Paquete.generated.h"
 
 UCLASS()
-class BUILDERLAB_API APaquete : public AActor, public IPlanosPaquete
+class BUILDERLAB_API APaquete : public AActor//, public IPlanosPaquete
 {
 	GENERATED_BODY()
 	
@@ -32,7 +32,7 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void SetMesh(UStaticMeshComponent* MallaPaquete) override;
+	/*void SetMesh(UStaticMeshComponent* MallaPaquete) override;
 	void SetCapsulas(FString Capsula) override;
-	void BuildCapsula();
+	void BuildCapsula();*/
 };
