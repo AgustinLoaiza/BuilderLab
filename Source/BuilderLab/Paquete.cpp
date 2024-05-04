@@ -33,6 +33,7 @@ void APaquete::Tick(float DeltaTime)
 	if (TiempoTranscurrido>=5)
 	{
 		BuildCapsula();
+		Destroy();
 		TiempoTranscurrido = 0;
 	}
 	ubicacionPaquete = GetActorLocation();
@@ -55,8 +56,8 @@ void APaquete::BuildCapsula()
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
 		{
-			FVector ubicacionGasolinera = ubicacionPaquete + FVector(-100.0f, 300.0f, 0.0f);
-			World->SpawnActor<AMunicion>(ubicacionGasolinera, FRotator::ZeroRotator);
+			FVector ubicacionMunicion = ubicacionPaquete + FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AMunicion>(ubicacionMunicion, FRotator::ZeroRotator);
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Capsula"));
 		}
 	}
@@ -65,8 +66,8 @@ void APaquete::BuildCapsula()
 		UWorld* const World = GetWorld();
 		if (World != nullptr)
 		{
-			FVector ubicacionGasolinera = ubicacionPaquete + FVector(-100.0f, 300.0f, 0.0f);
-			World->SpawnActor<AVelocidad>(ubicacionGasolinera, FRotator::ZeroRotator); 
+			FVector ubicacionVelocidad = ubicacionPaquete + FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AVelocidad>(ubicacionVelocidad, FRotator::ZeroRotator); 
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Capsula")); 
 		}
 	}
