@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Velocidad.h"
 #include "ComponenteVelocidad.generated.h"
 
 
@@ -15,6 +16,13 @@ class BUILDERLAB_API UComponenteVelocidad : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UComponenteVelocidad();
+
+	UPROPERTY()
+	TArray<AVelocidad*> CurrentInventory;
+	UFUNCTION()
+	int32 AddToInventory(AVelocidad* ActorToAdd);
+	UFUNCTION()
+	void RemoveFromInventory(AVelocidad* ActorToRemove);
 
 protected:
 	// Called when the game starts

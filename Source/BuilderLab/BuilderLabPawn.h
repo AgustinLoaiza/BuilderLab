@@ -4,6 +4,12 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+//Incluimos todo relacionado a Municion
+#include "ComponenteMunicion.h"
+#include "Municion.h"
+//Incluimos todo relacionado a Velocidad
+#include "ComponenteVelocidad.h"
+#include "Velocidad.h"
 #include "BuilderLabPawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -59,6 +65,7 @@ public:
 	static const FName FireForwardBinding;
 	static const FName FireRightBinding;
 
+	int32 cargador = 50;
 private:
 
 	/* Flag to control firing  */
@@ -74,5 +81,26 @@ public:
 	FORCEINLINE class UCameraComponent* GetCameraComponent() const { return CameraComponent; }
 	/** Returns CameraBoom subobject **/
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
+
+public:
+	//Interaccion de Pawn con la Municion
+	UPROPERTY()
+	UComponenteMunicion* Municion;
+	UFUNCTION()
+	void DropItemMunicion();
+	UFUNCTION()
+	void TakeItemMunicion(AMunicion* InventoryItem);
+
+	//Interaccion de Pawn con la Velocidad
+	UPROPERTY()
+	UComponenteVelocidad* Velocidad;
+	UFUNCTION()
+	void DropItemVelocidad();
+	UFUNCTION()
+	void TakeItemVelocidad(AVelocidad* InventoryItem);
+
+	//Interaccion de Pawn con todos los consumibles, la notificacion de la colision
+	UFUNCTION()
+	virtual void NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit) override;
 };
 

@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Municion.h"
 #include "ComponenteMunicion.generated.h"
 
 
@@ -15,6 +16,13 @@ class BUILDERLAB_API UComponenteMunicion : public UActorComponent
 public:	
 	// Sets default values for this component's properties
 	UComponenteMunicion();
+
+	UPROPERTY()
+	TArray<AMunicion*> CurrentInventory;
+	UFUNCTION()
+	int32 AddToInventory(AMunicion* ActorToAdd);
+	UFUNCTION()
+	void RemoveFromInventory(AMunicion* ActorToRemove);
 
 protected:
 	// Called when the game starts

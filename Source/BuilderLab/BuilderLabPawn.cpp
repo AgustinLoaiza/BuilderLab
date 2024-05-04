@@ -102,32 +102,37 @@ void ABuilderLabPawn::Tick(float DeltaSeconds)
 void ABuilderLabPawn::FireShot(FVector FireDirection)
 {
 	// If it's ok to fire again
-	if (bCanFire == true)
+	if (cargador>0)
 	{
-		// If we are pressing fire stick in a direction
-		if (FireDirection.SizeSquared() > 0.0f)
+		if (bCanFire == true)
 		{
-			const FRotator FireRotation = FireDirection.Rotation();
-			// Spawn projectile at an offset from this pawn
-			const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
-
-			UWorld* const World = GetWorld();
-			if (World != nullptr)
+			// If we are pressing fire stick in a direction
+			if (FireDirection.SizeSquared() > 0.0f)
 			{
-				// spawn the projectile
-				World->SpawnActor<ABuilderLabProjectile>(SpawnLocation, FireRotation);
+				const FRotator FireRotation = FireDirection.Rotation();
+				// Spawn projectile at an offset from this pawn
+				const FVector SpawnLocation = GetActorLocation() + FireRotation.RotateVector(GunOffset);
+
+				UWorld* const World = GetWorld();
+				if (World != nullptr)
+				{
+					// spawn the projectile
+					World->SpawnActor<ABuilderLabProjectile>(SpawnLocation, FireRotation);
+				}
+				//reducimos el cargador
+				cargador--;
+
+				bCanFire = false;
+				World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &ABuilderLabPawn::ShotTimerExpired, FireRate);
+
+				// try and play the sound if specified
+				if (FireSound != nullptr)
+				{
+					UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
+				}
+
+				bCanFire = false;
 			}
-
-			bCanFire = false;
-			World->GetTimerManager().SetTimer(TimerHandle_ShotTimerExpired, this, &ABuilderLabPawn::ShotTimerExpired, FireRate);
-
-			// try and play the sound if specified
-			if (FireSound != nullptr)
-			{
-				UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
-			}
-
-			bCanFire = false;
 		}
 	}
 }
@@ -135,5 +140,49 @@ void ABuilderLabPawn::FireShot(FVector FireDirection)
 void ABuilderLabPawn::ShotTimerExpired()
 {
 	bCanFire = true;
+}
+
+//Inicalizacion de las funciones de recoger y soltar Municion
+void ABuilderLabPawn::DropItemMunicion()
+{
+	if (Municion->CurrentInventory.Num() == 0)
+	{
+		return;
+	}
+	AMunicion* Item = Municion->CurrentInventory.Last();
+	Municion->RemoveFromInventory(Item);
+	FVector ItemOrigin;
+	FVector ItemBounds;
+	Item->GetActorBounds(false, ItemOrigin, ItemBounds);
+	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() * ItemBounds.GetMax());
+	Item->SoltarMunicion(PutDownLocation);
+}
+
+void ABuilderLabPawn::TakeItemMunicion(AMunicion* InventoryItem)
+{
+	InventoryItem->AgarrarMunicion();
+	Municion->AddToInventory(InventoryItem);
+}
+
+//Inicalizacion de las funciones de recoger y soltar Velocidad
+void ABuilderLabPawn::DropItemVelocidad()
+{
+	if (Velocidad->CurrentInventory.Num() == 0)
+	{
+		return;
+	}
+	AVelocidad* Item = Velocidad->CurrentInventory.Last();
+	Velocidad->RemoveFromInventory(Item);
+	FVector ItemOrigin;
+	FVector ItemBounds;
+	Item->GetActorBounds(false, ItemOrigin, ItemBounds);
+	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() * ItemBounds.GetMax());
+	Item->SoltarVelocidad(PutDownLocation);
+}
+
+void ABuilderLabPawn::TakeItemVelocidad(AVelocidad* InventoryItem)
+{
+	InventoryItem->AgarrarVelocidad();
+	Velocidad->AddToInventory(InventoryItem);
 }
 

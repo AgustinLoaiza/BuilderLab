@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodePaqueteroBalas() {}
 	BUILDERLAB_API UClass* Z_Construct_UClass_APaqueteroBalas();
 	ENGINE_API UClass* Z_Construct_UClass_AActor();
 	UPackage* Z_Construct_UPackage__Script_BuilderLab();
+	BUILDERLAB_API UClass* Z_Construct_UClass_UPaquetero_NoRegister();
 // End Cross Module References
 	void APaqueteroBalas::StaticRegisterNativesAPaqueteroBalas()
 	{
@@ -31,6 +32,7 @@ void EmptyLinkFunctionForGeneratedCodePaqueteroBalas() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+		static const UE4CodeGen_Private::FImplementedInterfaceParams InterfaceParams[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -44,6 +46,9 @@ void EmptyLinkFunctionForGeneratedCodePaqueteroBalas() {}
 		{ "ModuleRelativePath", "PaqueteroBalas.h" },
 	};
 #endif
+		const UE4CodeGen_Private::FImplementedInterfaceParams Z_Construct_UClass_APaqueteroBalas_Statics::InterfaceParams[] = {
+			{ Z_Construct_UClass_UPaquetero_NoRegister, (int32)VTABLE_OFFSET(APaqueteroBalas, IPaquetero), false },
+		};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_APaqueteroBalas_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<APaqueteroBalas>::IsAbstract,
 	};
@@ -54,11 +59,11 @@ void EmptyLinkFunctionForGeneratedCodePaqueteroBalas() {}
 		DependentSingletons,
 		nullptr,
 		nullptr,
-		nullptr,
+		InterfaceParams,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
 		0,
-		0,
+		UE_ARRAY_COUNT(InterfaceParams),
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_APaqueteroBalas_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_APaqueteroBalas_Statics::Class_MetaDataParams))
 	};
@@ -71,7 +76,7 @@ void EmptyLinkFunctionForGeneratedCodePaqueteroBalas() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APaqueteroBalas, 2319401376);
+	IMPLEMENT_CLASS(APaqueteroBalas, 1456163116);
 	template<> BUILDERLAB_API UClass* StaticClass<APaqueteroBalas>()
 	{
 		return APaqueteroBalas::StaticClass();

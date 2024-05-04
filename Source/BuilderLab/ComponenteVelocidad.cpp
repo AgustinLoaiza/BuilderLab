@@ -13,6 +13,17 @@ UComponenteVelocidad::UComponenteVelocidad()
 	// ...
 }
 
+int32 UComponenteVelocidad::AddToInventory(AVelocidad* ActorToAdd)
+{
+	return CurrentInventory.Add(ActorToAdd);
+}
+
+void UComponenteVelocidad::RemoveFromInventory(AVelocidad* ActorToRemove)
+{
+	CurrentInventory.Remove(ActorToRemove);
+}
+
+
 
 // Called when the game starts
 void UComponenteVelocidad::BeginPlay()

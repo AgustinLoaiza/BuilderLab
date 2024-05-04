@@ -13,5 +13,12 @@ UCLASS()
 class BUILDERLAB_API AVelocidad : public AStaticMeshActor
 {
 	GENERATED_BODY()
+
+public:
+	UStaticMeshComponent* MeshVelocidad;
+	AVelocidad();
+
+	virtual void AgarrarVelocidad();
+	virtual void SoltarVelocidad(FTransform TargetLocation);
 	
 };

@@ -13,6 +13,16 @@ UComponenteMunicion::UComponenteMunicion()
 	// ...
 }
 
+int32 UComponenteMunicion::AddToInventory(AMunicion* ActorToAdd)
+{
+	return CurrentInventory.Add(ActorToAdd);
+}
+
+void UComponenteMunicion::RemoveFromInventory(AMunicion* ActorToRemove)
+{
+	CurrentInventory.Remove(ActorToRemove);
+}
+
 
 // Called when the game starts
 void UComponenteMunicion::BeginPlay()

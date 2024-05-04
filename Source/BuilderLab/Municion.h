@@ -13,5 +13,12 @@ UCLASS()
 class BUILDERLAB_API AMunicion : public AStaticMeshActor
 {
 	GENERATED_BODY()
-	
+
+public:
+
+	UStaticMeshComponent* MeshMunicion;
+	AMunicion();
+
+	virtual void AgarrarMunicion();
+	virtual void SoltarMunicion(FTransform TargetLocation);
 };
