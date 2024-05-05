@@ -1,0 +1,9 @@
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Definitions.BuilderLab.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab/Paquete.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\PlanosPaquete.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\PlanosPaquete.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\ComponenteGestion.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\ComponenteGestion.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Paquete.generated.h

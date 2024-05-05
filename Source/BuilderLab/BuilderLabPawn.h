@@ -10,6 +10,9 @@
 //Incluimos todo relacionado a Velocidad
 #include "ComponenteVelocidad.h"
 #include "Velocidad.h"
+//Incluimos todo relacionado a Medicina
+#include "ComponenteMedicina.h"
+#include "Medicina.h"
 #include "BuilderLabPawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -65,7 +68,15 @@ public:
 	static const FName FireForwardBinding;
 	static const FName FireRightBinding;
 
+	//Le damos un cargador a la nave
 	int32 cargador = 50;
+
+	//Le damos vidas a la nave
+	int32 vida = 3;
+
+	//Le damos energía a la nave
+	int32 energia = 100;
+
 private:
 
 	/* Flag to control firing  */
@@ -98,6 +109,14 @@ public:
 	void DropItemVelocidad();
 	UFUNCTION()
 	void TakeItemVelocidad(AVelocidad* InventoryItem);
+
+	//Interaccion de Pawn con la Vida
+	UPROPERTY()
+	UComponenteMedicina* Medicina;
+	UFUNCTION()
+	void DropItemMedicina();
+	UFUNCTION()
+	void TakeItemMedicina(AMedicina* InventoryItem);
 
 	//Interaccion de Pawn con todos los consumibles, la notificacion de la colision
 	UFUNCTION()

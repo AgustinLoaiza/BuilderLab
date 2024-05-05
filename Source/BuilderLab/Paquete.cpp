@@ -4,6 +4,7 @@
 #include "Paquete.h"
 #include "Municion.h"
 #include "Velocidad.h"
+#include "Medicina.h"
 
 // Sets default values
 APaquete::APaquete()
@@ -68,6 +69,16 @@ void APaquete::BuildCapsula()
 			FVector ubicacionVelocidad = ubicacionPaquete + FVector(-100.0f, 300.0f, 0.0f);
 			World->SpawnActor<AVelocidad>(ubicacionVelocidad, FRotator::ZeroRotator); 
 			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Capsula")); 
+		}
+	}
+	else if (Capsula == "Medicina")
+	{
+		UWorld* const World = GetWorld();
+		if (World != nullptr)
+		{
+			FVector ubicacionMedicina = ubicacionPaquete + FVector(-100.0f, 300.0f, 0.0f);
+			World->SpawnActor<AMedicina>(ubicacionMedicina, FRotator::ZeroRotator);
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Blue, TEXT("Se creo la Capsula"));
 		}
 	}
 	else

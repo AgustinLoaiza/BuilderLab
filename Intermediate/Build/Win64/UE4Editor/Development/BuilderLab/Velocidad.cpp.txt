@@ -16,4 +16,8 @@ C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Wi
 C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\ComponenteMunicion.generated.h
 C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\ComponenteVelocidad.h
 C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\ComponenteVelocidad.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\ComponenteMedicina.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\Medicina.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Medicina.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\ComponenteMedicina.generated.h
 C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\BuilderLabPawn.generated.h

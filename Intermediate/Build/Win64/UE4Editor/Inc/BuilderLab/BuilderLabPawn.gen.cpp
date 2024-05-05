@@ -21,6 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeBuilderLabPawn() {}
 	ENGINE_API UClass* Z_Construct_UClass_AActor_NoRegister();
 	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UScriptStruct* Z_Construct_UScriptStruct_FHitResult();
+	BUILDERLAB_API UClass* Z_Construct_UClass_AMedicina_NoRegister();
 	BUILDERLAB_API UClass* Z_Construct_UClass_AMunicion_NoRegister();
 	BUILDERLAB_API UClass* Z_Construct_UClass_AVelocidad_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UStaticMeshComponent_NoRegister();
@@ -29,6 +30,7 @@ void EmptyLinkFunctionForGeneratedCodeBuilderLabPawn() {}
 	ENGINE_API UClass* Z_Construct_UClass_USoundBase_NoRegister();
 	BUILDERLAB_API UClass* Z_Construct_UClass_UComponenteMunicion_NoRegister();
 	BUILDERLAB_API UClass* Z_Construct_UClass_UComponenteVelocidad_NoRegister();
+	BUILDERLAB_API UClass* Z_Construct_UClass_UComponenteMedicina_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(ABuilderLabPawn::execNotifyHit)
 	{
@@ -43,6 +45,21 @@ void EmptyLinkFunctionForGeneratedCodeBuilderLabPawn() {}
 		P_FINISH;
 		P_NATIVE_BEGIN;
 		P_THIS->NotifyHit(Z_Param_MyComp,Z_Param_Other,Z_Param_OtherComp,Z_Param_bSelfMoved,Z_Param_HitLocation,Z_Param_HitNormal,Z_Param_NormalImpulse,Z_Param_Out_Hit);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ABuilderLabPawn::execTakeItemMedicina)
+	{
+		P_GET_OBJECT(AMedicina,Z_Param_InventoryItem);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->TakeItemMedicina(Z_Param_InventoryItem);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ABuilderLabPawn::execDropItemMedicina)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->DropItemMedicina();
 		P_NATIVE_END;
 	}
 	DEFINE_FUNCTION(ABuilderLabPawn::execTakeItemVelocidad)
@@ -79,13 +96,37 @@ void EmptyLinkFunctionForGeneratedCodeBuilderLabPawn() {}
 	{
 		UClass* Class = ABuilderLabPawn::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
+			{ "DropItemMedicina", &ABuilderLabPawn::execDropItemMedicina },
 			{ "DropItemMunicion", &ABuilderLabPawn::execDropItemMunicion },
 			{ "DropItemVelocidad", &ABuilderLabPawn::execDropItemVelocidad },
 			{ "NotifyHit", &ABuilderLabPawn::execNotifyHit },
+			{ "TakeItemMedicina", &ABuilderLabPawn::execTakeItemMedicina },
 			{ "TakeItemMunicion", &ABuilderLabPawn::execTakeItemMunicion },
 			{ "TakeItemVelocidad", &ABuilderLabPawn::execTakeItemVelocidad },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ABuilderLabPawn_DropItemMedicina_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABuilderLabPawn_DropItemMedicina_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BuilderLabPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuilderLabPawn_DropItemMedicina_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuilderLabPawn, nullptr, "DropItemMedicina", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABuilderLabPawn_DropItemMedicina_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABuilderLabPawn_DropItemMedicina_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ABuilderLabPawn_DropItemMedicina()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuilderLabPawn_DropItemMedicina_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	struct Z_Construct_UFunction_ABuilderLabPawn_DropItemMunicion_Statics
 	{
@@ -222,6 +263,38 @@ void EmptyLinkFunctionForGeneratedCodeBuilderLabPawn() {}
 		}
 		return ReturnFunction;
 	}
+	struct Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics
+	{
+		struct BuilderLabPawn_eventTakeItemMedicina_Parms
+		{
+			AMedicina* InventoryItem;
+		};
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_InventoryItem;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics::NewProp_InventoryItem = { "InventoryItem", nullptr, (EPropertyFlags)0x0010000000000080, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(BuilderLabPawn_eventTakeItemMedicina_Parms, InventoryItem), Z_Construct_UClass_AMedicina_NoRegister, METADATA_PARAMS(nullptr, 0) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics::NewProp_InventoryItem,
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BuilderLabPawn.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABuilderLabPawn, nullptr, "TakeItemMedicina", nullptr, nullptr, sizeof(BuilderLabPawn_eventTakeItemMedicina_Parms), Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
 	struct Z_Construct_UFunction_ABuilderLabPawn_TakeItemMunicion_Statics
 	{
 		struct BuilderLabPawn_eventTakeItemMunicion_Parms
@@ -333,6 +406,10 @@ void EmptyLinkFunctionForGeneratedCodeBuilderLabPawn() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Velocidad_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Velocidad;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Medicina_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Medicina;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -342,9 +419,11 @@ void EmptyLinkFunctionForGeneratedCodeBuilderLabPawn() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_BuilderLab,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABuilderLabPawn_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABuilderLabPawn_DropItemMedicina, "DropItemMedicina" }, // 3533150996
 		{ &Z_Construct_UFunction_ABuilderLabPawn_DropItemMunicion, "DropItemMunicion" }, // 3295591977
 		{ &Z_Construct_UFunction_ABuilderLabPawn_DropItemVelocidad, "DropItemVelocidad" }, // 75951659
 		{ &Z_Construct_UFunction_ABuilderLabPawn_NotifyHit, "NotifyHit" }, // 4053996186
+		{ &Z_Construct_UFunction_ABuilderLabPawn_TakeItemMedicina, "TakeItemMedicina" }, // 1470937968
 		{ &Z_Construct_UFunction_ABuilderLabPawn_TakeItemMunicion, "TakeItemMunicion" }, // 1994891755
 		{ &Z_Construct_UFunction_ABuilderLabPawn_TakeItemVelocidad, "TakeItemVelocidad" }, // 3046613927
 	};
@@ -444,6 +523,15 @@ void EmptyLinkFunctionForGeneratedCodeBuilderLabPawn() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_Velocidad = { "Velocidad", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABuilderLabPawn, Velocidad), Z_Construct_UClass_UComponenteVelocidad_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_Velocidad_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_Velocidad_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_Medicina_MetaData[] = {
+		{ "Comment", "//Interaccion de Pawn con la Vida\n" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "BuilderLabPawn.h" },
+		{ "ToolTip", "Interaccion de Pawn con la Vida" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_Medicina = { "Medicina", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(ABuilderLabPawn, Medicina), Z_Construct_UClass_UComponenteMedicina_NoRegister, METADATA_PARAMS(Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_Medicina_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_Medicina_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_ABuilderLabPawn_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_ShipMeshComponent,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_CameraComponent,
@@ -454,6 +542,7 @@ void EmptyLinkFunctionForGeneratedCodeBuilderLabPawn() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_FireSound,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_Municion,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_Velocidad,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_ABuilderLabPawn_Statics::NewProp_Medicina,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_ABuilderLabPawn_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<ABuilderLabPawn>::IsAbstract,
@@ -482,7 +571,7 @@ void EmptyLinkFunctionForGeneratedCodeBuilderLabPawn() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(ABuilderLabPawn, 3740430103);
+	IMPLEMENT_CLASS(ABuilderLabPawn, 1534822818);
 	template<> BUILDERLAB_API UClass* StaticClass<ABuilderLabPawn>()
 	{
 		return ABuilderLabPawn::StaticClass();

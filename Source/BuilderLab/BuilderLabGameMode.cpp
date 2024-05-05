@@ -4,6 +4,7 @@
 #include "BuilderLabPawn.h"
 #include "PaqueteroBalas.h"
 #include "PaqueteroVelocidad.h"
+#include "PaqueteroMedicina.h"
 #include "JefeAduanas.h"
 #include "Paquete.h"
 

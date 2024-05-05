@@ -24,6 +24,7 @@ private:
 	class AJefeAduanas* JefeAduanas;
 	class APaqueteroBalas* PaqueteroMunicion;
 	class APaqueteroVelocidad* PaqueteroVelocidad; 
+	class APaqueteroMedicina* PaqueteroMedicina;
 
 public:	
 	// Called every frame

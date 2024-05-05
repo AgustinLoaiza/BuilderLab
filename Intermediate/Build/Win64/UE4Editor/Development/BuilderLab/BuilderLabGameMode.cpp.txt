@@ -1,0 +1,45 @@
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Definitions.BuilderLab.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\BuilderLabGameMode.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/GameModeBase.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/ServerStatReplicator.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\ServerStatReplicator.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameModeBase.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\ComponenteGestion.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\ComponenteGestion.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\BuilderLabGameMode.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\BuilderLabPawn.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\ComponenteMunicion.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\Municion.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/StaticMeshActor.h
+C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\StaticMeshActor.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Municion.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\ComponenteMunicion.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\ComponenteVelocidad.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\Velocidad.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Velocidad.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\ComponenteVelocidad.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\ComponenteMedicina.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\Medicina.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Medicina.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\ComponenteMedicina.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\BuilderLabPawn.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\PaqueteroBalas.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\Paquetero.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Paquetero.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\PaqueteroBalas.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\PaqueteroVelocidad.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\PaqueteroVelocidad.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\PaqueteroMedicina.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\PaqueteroMedicina.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\JefeAduanas.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\JefeAduanas.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\Paquete.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Source\BuilderLab\PlanosPaquete.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\PlanosPaquete.generated.h
+C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Inc\BuilderLab\Paquete.generated.h

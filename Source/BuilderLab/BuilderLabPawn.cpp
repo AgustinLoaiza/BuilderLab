@@ -54,6 +54,7 @@ ABuilderLabPawn::ABuilderLabPawn()
 	//Inicializamos los componentes de actor de las capsulas
 	Municion = CreateDefaultSubobject<UComponenteMunicion>("Municion");
 	Velocidad = CreateDefaultSubobject<UComponenteVelocidad>("Velocidad"); 
+	Medicina = CreateDefaultSubobject<UComponenteMedicina>("Medicina");
 }
 
 void ABuilderLabPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -101,6 +102,23 @@ void ABuilderLabPawn::Tick(float DeltaSeconds)
 
 	// Try and fire a shot
 	FireShot(FireDirection);
+
+	//Logica de administracion de vida y energia
+
+	if (energia <= 0)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Vida: " + FString::FromInt(vida)));
+		vida--;
+		SetActorLocation(FVector(0.0f, 0.0f, 250.0f));
+		energia = 100;
+		cargador = 50;
+		MoveSpeed = 1000.0f;
+	}
+	if (vida <= 0)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Green, TEXT("Has muerto"));
+		Destroy();
+	}
 }
 
 void ABuilderLabPawn::FireShot(FVector FireDirection)
@@ -190,6 +208,27 @@ void ABuilderLabPawn::TakeItemVelocidad(AVelocidad* InventoryItem)
 	Velocidad->AddToInventory(InventoryItem);
 }
 
+void ABuilderLabPawn::DropItemMedicina()
+{
+	if (Medicina->CurrentInventory.Num() == 0)
+	{
+		return;
+	}
+	AMedicina* Item = Medicina->CurrentInventory.Last();
+	Medicina->RemoveFromInventory(Item);
+	FVector ItemOrigin;
+	FVector ItemBounds;
+	Item->GetActorBounds(false, ItemOrigin, ItemBounds);
+	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() * ItemBounds.GetMax());
+	Item->SoltarMedicina(PutDownLocation);
+}
+
+void ABuilderLabPawn::TakeItemMedicina(AMedicina* InventoryItem)
+{
+	InventoryItem->AgarrarMedicina();
+	Medicina->AddToInventory(InventoryItem);
+}
+
 void ABuilderLabPawn::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
 	AMunicion* InventoryItemMunicion = Cast<AMunicion>(Other); 
@@ -203,6 +242,12 @@ void ABuilderLabPawn::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPri
 	{
 		TakeItemVelocidad(InventoryItemVelocidad);
 		MoveSpeed = 2000.0f;
+	}
+	AMedicina* InventoryItemMedicina = Cast<AMedicina>(Other);
+	if (InventoryItemMedicina != nullptr)
+	{
+		TakeItemMedicina(InventoryItemMedicina);
+		vida += 1;
 	}
 }
 
