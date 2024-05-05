@@ -18,8 +18,42 @@ void EmptyLinkFunctionForGeneratedCodeComponenteGestion() {}
 	ENGINE_API UClass* Z_Construct_UClass_USceneComponent();
 	UPackage* Z_Construct_UPackage__Script_BuilderLab();
 // End Cross Module References
+	DEFINE_FUNCTION(UComponenteGestion::execSpawn)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->Spawn();
+		P_NATIVE_END;
+	}
 	void UComponenteGestion::StaticRegisterNativesUComponenteGestion()
 	{
+		UClass* Class = UComponenteGestion::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "Spawn", &UComponenteGestion::execSpawn },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_UComponenteGestion_Spawn_Statics
+	{
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UE4CodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UComponenteGestion_Spawn_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "ComponenteGestion.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UComponenteGestion_Spawn_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UComponenteGestion, nullptr, "Spawn", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UComponenteGestion_Spawn_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UComponenteGestion_Spawn_Statics::Function_MetaDataParams)) };
+	UFunction* Z_Construct_UFunction_UComponenteGestion_Spawn()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_UComponenteGestion_Spawn_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	UClass* Z_Construct_UClass_UComponenteGestion_NoRegister()
 	{
@@ -28,6 +62,7 @@ void EmptyLinkFunctionForGeneratedCodeComponenteGestion() {}
 	struct Z_Construct_UClass_UComponenteGestion_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -37,6 +72,9 @@ void EmptyLinkFunctionForGeneratedCodeComponenteGestion() {}
 	UObject* (*const Z_Construct_UClass_UComponenteGestion_Statics::DependentSingletons[])() = {
 		(UObject* (*)())Z_Construct_UClass_USceneComponent,
 		(UObject* (*)())Z_Construct_UPackage__Script_BuilderLab,
+	};
+	const FClassFunctionLinkInfo Z_Construct_UClass_UComponenteGestion_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_UComponenteGestion_Spawn, "Spawn" }, // 593711767
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UComponenteGestion_Statics::Class_MetaDataParams[] = {
@@ -55,11 +93,11 @@ void EmptyLinkFunctionForGeneratedCodeComponenteGestion() {}
 		"Engine",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		nullptr,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		0,
 		0,
 		0x00B000A4u,
@@ -74,7 +112,7 @@ void EmptyLinkFunctionForGeneratedCodeComponenteGestion() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UComponenteGestion, 1166940237);
+	IMPLEMENT_CLASS(UComponenteGestion, 267501956);
 	template<> BUILDERLAB_API UClass* StaticClass<UComponenteGestion>()
 	{
 		return UComponenteGestion::StaticClass();

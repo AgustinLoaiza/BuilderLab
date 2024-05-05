@@ -2,6 +2,10 @@
 
 
 #include "ComponenteGestion.h"
+#include "PaqueteroBalas.h"
+#include "PaqueteroVelocidad.h"
+#include "JefeAduanas.h"
+#include "Paquete.h"
 
 // Sets default values for this component's properties
 UComponenteGestion::UComponenteGestion()
@@ -20,6 +24,11 @@ void UComponenteGestion::BeginPlay()
 	Super::BeginPlay();
 
 	// ...
+	JefeAduanas = GetWorld()->SpawnActor<AJefeAduanas>(AJefeAduanas::StaticClass());
+
+	PaqueteroMunicion = GetWorld()->SpawnActor<APaqueteroBalas>(APaqueteroBalas::StaticClass());
+
+	PaqueteroVelocidad = GetWorld()->SpawnActor<APaqueteroVelocidad>(APaqueteroVelocidad::StaticClass());
 	
 }
 
@@ -30,5 +39,33 @@ void UComponenteGestion::TickComponent(float DeltaTime, ELevelTick TickType, FAc
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
 
 	// ...
+	TiempoSpawneo += DeltaTime;
+	if (TiempoSpawneo >= 5)
+	{
+		Spawn();
+		TiempoSpawneo = 0;
+	}
+}
+
+void UComponenteGestion::Spawn()
+{
+	float PosicionX= FMath::RandRange(-500.0f, 500.0f);
+	float PosicionY = FMath::RandRange(-500.0f, 500.0f);
+	FVector Posicion = FVector(PosicionX, PosicionY, 250.0f);
+	PaqueteRandom = FMath::RandRange(1, 2);
+	if (PaqueteRandom==1)
+	{
+		JefeAduanas->SetPaquetero(PaqueteroMunicion);
+		JefeAduanas->ConstruirPaquete(FVector(Posicion), FRotator::ZeroRotator);
+	}
+	else if (PaqueteRandom==2)
+	{
+		JefeAduanas->SetPaquetero(PaqueteroVelocidad);
+		JefeAduanas->ConstruirPaquete(FVector(Posicion), FRotator::ZeroRotator);
+	}
+	else
+	{
+		nullptr;
+	}
 }
 

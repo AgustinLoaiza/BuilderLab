@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "ComponenteGestion.h"
 #include "BuilderLabGameMode.generated.h"
+
 
 UCLASS(MinimalAPI)
 class ABuilderLabGameMode : public AGameModeBase
@@ -15,9 +17,11 @@ public:
 	ABuilderLabGameMode();
 
 private:
-	class AJefeAduanas* JefeAduanas;
+	/*class AJefeAduanas* JefeAduanas;
 	class APaqueteroBalas* PaqueteroMunicion;
-	class APaqueteroVelocidad* PaqueteroVelocidad;
+	class APaqueteroVelocidad* PaqueteroVelocidad;*/
+
+	UComponenteGestion* ComponenteGestion;
 
 protected:
 	virtual void BeginPlay() override;

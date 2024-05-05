@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "PlanosPaquete.h"
+#include "ComponenteGestion.h"
 #include "Paquete.generated.h"
 
 UCLASS()
@@ -34,5 +35,5 @@ public:
 
 	void SetMesh(UStaticMeshComponent* _MallaPaquete) override;
 	void SetCapsulas(FString _Capsula) override;
-	void BuildCapsula();
+	void BuildCapsula(); 
 };

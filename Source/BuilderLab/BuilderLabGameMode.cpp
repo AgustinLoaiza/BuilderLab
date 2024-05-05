@@ -11,13 +11,14 @@ ABuilderLabGameMode::ABuilderLabGameMode()
 {
 	// set default pawn class to our character class
 	DefaultPawnClass = ABuilderLabPawn::StaticClass();
+	ComponenteGestion = CreateDefaultSubobject<UComponenteGestion>("ComponenteGestion"); 
 }
 
 void ABuilderLabGameMode::BeginPlay()
 {
 	Super::BeginPlay();
 
-	JefeAduanas = GetWorld()->SpawnActor<AJefeAduanas>(AJefeAduanas::StaticClass());
+	/*JefeAduanas = GetWorld()->SpawnActor<AJefeAduanas>(AJefeAduanas::StaticClass());
 
 	PaqueteroMunicion = GetWorld()->SpawnActor<APaqueteroBalas>(APaqueteroBalas::StaticClass());
 	JefeAduanas->SetPaquetero(PaqueteroMunicion);
@@ -27,7 +28,7 @@ void ABuilderLabGameMode::BeginPlay()
 	JefeAduanas->SetPaquetero(PaqueteroVelocidad);
 	JefeAduanas->ConstruirPaquete(FVector(700.0f, 500.0f, 215.0f), FRotator(0.0f, 0.0f, 0.0f));
 
-	APaquete* Paquete = JefeAduanas->GetPaquete();
+	APaquete* Paquete = JefeAduanas->GetPaquete();*/
 }
 
 void ABuilderLabGameMode::Tick(float DeltaTime)

@@ -14,7 +14,6 @@ APaquete::APaquete()
 	MallaPaquete = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Paquete"));
 	MallaPaquete->SetupAttachment(RootComponent);
 	RootComponent = MallaPaquete;
-
 }
 
 // Called when the game starts or when spawned

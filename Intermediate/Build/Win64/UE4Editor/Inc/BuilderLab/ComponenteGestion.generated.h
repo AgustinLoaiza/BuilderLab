@@ -14,8 +14,16 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define BUILDERLAB_ComponenteGestion_generated_h
 
 #define BuilderLab_Source_BuilderLab_ComponenteGestion_h_13_SPARSE_DATA
-#define BuilderLab_Source_BuilderLab_ComponenteGestion_h_13_RPC_WRAPPERS
-#define BuilderLab_Source_BuilderLab_ComponenteGestion_h_13_RPC_WRAPPERS_NO_PURE_DECLS
+#define BuilderLab_Source_BuilderLab_ComponenteGestion_h_13_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execSpawn);
+
+
+#define BuilderLab_Source_BuilderLab_ComponenteGestion_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execSpawn);
+
+
 #define BuilderLab_Source_BuilderLab_ComponenteGestion_h_13_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUComponenteGestion(); \

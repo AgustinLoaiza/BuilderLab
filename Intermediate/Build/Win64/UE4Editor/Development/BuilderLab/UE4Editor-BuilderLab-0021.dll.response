@@ -1,0 +1,99 @@
+/MANIFEST:EMBED
+/MANIFESTINPUT:"C:\Program Files\Epic Games\UE_4.27\Engine\Build\Windows\Resources\Default-Win64.manifest"
+/NOLOGO
+/DEBUG
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/FIXED:No
+/NXCOMPAT
+/STACK:12000000
+/DELAY:UNLOAD
+/DLL
+/PDBALTPATH:%_PDB%
+/OPT:NOREF
+/OPT:NOICF
+/INCREMENTAL:NO
+/ignore:4199
+/ignore:4099
+/DELAYLOAD:"d3d12.dll"
+/DELAYLOAD:"DBGHELP.DLL"
+/LIBPATH:"C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.39.33519\lib\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.8\lib\um\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\ucrt\x64"
+/LIBPATH:"C:\Program Files (x86)\Windows Kits\10\lib\10.0.22621.0\um\x64"
+/NODEFAULTLIB:"LIBCMT"
+/NODEFAULTLIB:"LIBCPMT"
+/NODEFAULTLIB:"LIBCMTD"
+/NODEFAULTLIB:"LIBCPMTD"
+/NODEFAULTLIB:"MSVCRTD"
+/NODEFAULTLIB:"MSVCPRTD"
+/NODEFAULTLIB:"LIBC"
+/NODEFAULTLIB:"LIBCP"
+/NODEFAULTLIB:"LIBCD"
+/NODEFAULTLIB:"LIBCPD"
+/FUNCTIONPADMIN
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\BuilderLabEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\BuilderLab.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\BuilderLabGameMode.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\BuilderLabPawn.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\BuilderLabProjectile.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\ComponenteGestion.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\ComponenteMunicion.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\ComponenteVelocidad.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\JefeAduanas.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Municion.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Paquete.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Paquetero.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\PaqueteroBalas.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\PaqueteroVelocidad.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\PlanosPaquete.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Velocidad.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\BuilderLab.init.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\BuilderLabGameMode.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\BuilderLabPawn.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\BuilderLabProjectile.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\ComponenteGestion.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\ComponenteMunicion.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\ComponenteVelocidad.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\JefeAduanas.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Municion.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Paquete.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Paquetero.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\PaqueteroBalas.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\PaqueteroVelocidad.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\PlanosPaquete.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Velocidad.gen.cpp.obj"
+"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\Default.rc2.res"
+"C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\Engine\UE4Editor-Engine.lib"
+"C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\Core\UE4Editor-Core.lib"
+"C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\CoreUObject\UE4Editor-CoreUObject.lib"
+"C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Development\InputCore\UE4Editor-InputCore.lib"
+"delayimp.lib"
+"wininet.lib"
+"rpcrt4.lib"
+"ws2_32.lib"
+"dbghelp.lib"
+"comctl32.lib"
+"Winmm.lib"
+"kernel32.lib"
+"user32.lib"
+"gdi32.lib"
+"winspool.lib"
+"comdlg32.lib"
+"advapi32.lib"
+"shell32.lib"
+"ole32.lib"
+"oleaut32.lib"
+"uuid.lib"
+"odbc32.lib"
+"odbccp32.lib"
+"netapi32.lib"
+"iphlpapi.lib"
+"setupapi.lib"
+"dwmapi.lib"
+"imm32.lib"
+/OUT:"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Binaries\Win64\UE4Editor-BuilderLab-0021.dll"
+/IMPLIB:"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Intermediate\Build\Win64\UE4Editor\Development\BuilderLab\UE4Editor-BuilderLab-0021.suppressed.lib"
+/PDB:"C:\Users\User\Desktop\BuilderLab_Agustin_Loaiza\BuilderLab\Binaries\Win64\UE4Editor-BuilderLab-0021.pdb"
+/ignore:4078
