@@ -17,9 +17,9 @@ public:
 	// Sets default values for this actor's properties
 	APaquete();
 
-	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	UPROPERTY(VisibleAnywhere, Category = "Paquete")
 	FString Capsula;
-	UPROPERTY(VisibleAnywhere, Category = "Boqueron")
+	UPROPERTY(VisibleAnywhere, Category = "Paquete")
 	UStaticMeshComponent* MallaPaquete;
 
 	FVector ubicacionPaquete;

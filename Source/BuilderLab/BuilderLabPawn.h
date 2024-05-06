@@ -13,6 +13,11 @@
 //Incluimos todo relacionado a Medicina
 #include "ComponenteMedicina.h"
 #include "Medicina.h"
+//Incluimos todo relacionado a Mejora
+#include "ComponenteMejora.h"
+#include "Mejora.h"
+//Objeto Experimental
+#include "ObjetoPrueba.h"
 #include "BuilderLabPawn.generated.h"
 
 UCLASS(Blueprintable)
@@ -77,6 +82,9 @@ public:
 	//Le damos energía a la nave
 	int32 energia = 100;
 
+	//Declaramos una variable de validacion para el disparon multiple
+	bool disparoMultiple = false;
+
 private:
 
 	/* Flag to control firing  */
@@ -117,6 +125,14 @@ public:
 	void DropItemMedicina();
 	UFUNCTION()
 	void TakeItemMedicina(AMedicina* InventoryItem);
+
+	//Interaccion de Pawn con la Mejora
+	UPROPERTY()
+	UComponenteMejora* Mejora;
+	UFUNCTION()
+	void DropItemMejora();
+	UFUNCTION()
+	void TakeItemMejora(AMejora* InventoryItem);
 
 	//Interaccion de Pawn con todos los consumibles, la notificacion de la colision
 	UFUNCTION()

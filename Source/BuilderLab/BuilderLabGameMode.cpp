@@ -7,6 +7,7 @@
 #include "PaqueteroMedicina.h"
 #include "JefeAduanas.h"
 #include "Paquete.h"
+#include "ObjetoPrueba.h"
 
 ABuilderLabGameMode::ABuilderLabGameMode()
 {
@@ -18,6 +19,9 @@ ABuilderLabGameMode::ABuilderLabGameMode()
 void ABuilderLabGameMode::BeginPlay()
 {
 	Super::BeginPlay();
+
+	FVector UbicacionObjeto = FVector(500.0f, 700.0f, 250.0f);
+	AObjetoPrueba* Ojeto = GetWorld()->SpawnActor<AObjetoPrueba>(UbicacionObjeto, FRotator::ZeroRotator);
 
 	/*JefeAduanas = GetWorld()->SpawnActor<AJefeAduanas>(AJefeAduanas::StaticClass());
 

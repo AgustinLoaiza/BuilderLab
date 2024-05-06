@@ -5,6 +5,7 @@
 #include "PaqueteroBalas.h"
 #include "PaqueteroVelocidad.h"
 #include "PaqueteroMedicina.h"
+#include "PaqueteroMejora.h"
 #include "JefeAduanas.h"
 #include "Paquete.h"
 
@@ -30,6 +31,7 @@ void UComponenteGestion::BeginPlay()
 	PaqueteroMunicion = GetWorld()->SpawnActor<APaqueteroBalas>(APaqueteroBalas::StaticClass());
 	PaqueteroVelocidad = GetWorld()->SpawnActor<APaqueteroVelocidad>(APaqueteroVelocidad::StaticClass());
 	PaqueteroMedicina = GetWorld()->SpawnActor<APaqueteroMedicina>(APaqueteroMedicina::StaticClass());
+	PaqueteroMejora = GetWorld()->SpawnActor<APaqueteroMejora>(APaqueteroMejora::StaticClass());
 	
 }
 
@@ -53,7 +55,7 @@ void UComponenteGestion::Spawn()
 	float PosicionX= FMath::RandRange(-500.0f, 500.0f);
 	float PosicionY = FMath::RandRange(-500.0f, 500.0f);
 	FVector Posicion = FVector(PosicionX, PosicionY, 250.0f);
-	PaqueteRandom = FMath::RandRange(1, 3);
+	PaqueteRandom = FMath::RandRange(1, 4);
 
 	if (PaqueteRandom==1)
 	{
@@ -68,6 +70,11 @@ void UComponenteGestion::Spawn()
 	else if (PaqueteRandom==3)
 	{
 		JefeAduanas->SetPaquetero(PaqueteroMedicina);
+		JefeAduanas->ConstruirPaquete(FVector(Posicion), FRotator::ZeroRotator);
+	}
+	else if (PaqueteRandom == 4)
+	{
+		JefeAduanas->SetPaquetero(PaqueteroMejora);
 		JefeAduanas->ConstruirPaquete(FVector(Posicion), FRotator::ZeroRotator);
 	}
 	else

@@ -25,6 +25,7 @@ private:
 	class APaqueteroBalas* PaqueteroMunicion;
 	class APaqueteroVelocidad* PaqueteroVelocidad; 
 	class APaqueteroMedicina* PaqueteroMedicina;
+	class APaqueteroMejora* PaqueteroMejora;
 
 public:	
 	// Called every frame

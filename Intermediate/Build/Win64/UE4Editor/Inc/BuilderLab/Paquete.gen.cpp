@@ -58,14 +58,14 @@ void EmptyLinkFunctionForGeneratedCodePaquete() {}
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APaquete_Statics::NewProp_Capsula_MetaData[] = {
-		{ "Category", "Boqueron" },
+		{ "Category", "Paquete" },
 		{ "ModuleRelativePath", "Paquete.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FStrPropertyParams Z_Construct_UClass_APaquete_Statics::NewProp_Capsula = { "Capsula", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Str, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(APaquete, Capsula), METADATA_PARAMS(Z_Construct_UClass_APaquete_Statics::NewProp_Capsula_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_APaquete_Statics::NewProp_Capsula_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_APaquete_Statics::NewProp_MallaPaquete_MetaData[] = {
-		{ "Category", "Boqueron" },
+		{ "Category", "Paquete" },
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Paquete.h" },
 	};
@@ -105,7 +105,7 @@ void EmptyLinkFunctionForGeneratedCodePaquete() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(APaquete, 471954218);
+	IMPLEMENT_CLASS(APaquete, 2634930093);
 	template<> BUILDERLAB_API UClass* StaticClass<APaquete>()
 	{
 		return APaquete::StaticClass();

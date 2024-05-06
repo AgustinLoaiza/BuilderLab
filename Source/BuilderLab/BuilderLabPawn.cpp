@@ -55,6 +55,7 @@ ABuilderLabPawn::ABuilderLabPawn()
 	Municion = CreateDefaultSubobject<UComponenteMunicion>("Municion");
 	Velocidad = CreateDefaultSubobject<UComponenteVelocidad>("Velocidad"); 
 	Medicina = CreateDefaultSubobject<UComponenteMedicina>("Medicina");
+	Mejora = CreateDefaultSubobject<UComponenteMejora>("Mejora");
 }
 
 void ABuilderLabPawn::SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent)
@@ -140,6 +141,17 @@ void ABuilderLabPawn::FireShot(FVector FireDirection)
 				{
 					// spawn the projectile
 					World->SpawnActor<ABuilderLabProjectile>(SpawnLocation, FireRotation);
+
+					//Disparo multiple
+					if (disparoMultiple)
+					{
+						const FRotator FireRotation2 = FireDirection.Rotation() + FRotator(10.0f, 30.0f, 0.0f);
+						const FRotator FireRotation3 = FireDirection.Rotation() + FRotator(10.0f, -30.0f, 0.0f);
+						const FVector SpawnLocation2 = GetActorLocation() + FVector(10.0f, 30.0f, 0.0f) + FireRotation2.RotateVector(GunOffset);
+						const FVector SpawnLocation3 = GetActorLocation() + FVector(10.0f, -30.0f, 0.0f) + FireRotation3.RotateVector(GunOffset);
+						World->SpawnActor<ABuilderLabProjectile>(SpawnLocation2, FireRotation2);
+						World->SpawnActor<ABuilderLabProjectile>(SpawnLocation3, FireRotation3);
+					}
 				}
 				//reducimos el cargador
 				cargador--;
@@ -229,8 +241,35 @@ void ABuilderLabPawn::TakeItemMedicina(AMedicina* InventoryItem)
 	Medicina->AddToInventory(InventoryItem);
 }
 
+void ABuilderLabPawn::DropItemMejora()
+{
+	if (Mejora->CurrentInventory.Num() == 0)
+	{
+		return;
+	}
+	AMejora* Item = Mejora->CurrentInventory.Last();
+	Mejora->RemoveFromInventory(Item);
+	FVector ItemOrigin;
+	FVector ItemBounds;
+	Item->GetActorBounds(false, ItemOrigin, ItemBounds);
+	FTransform PutDownLocation = GetTransform() + FTransform(RootComponent->GetForwardVector() * ItemBounds.GetMax());
+	Item->SoltarMejora(PutDownLocation);
+}
+
+void ABuilderLabPawn::TakeItemMejora(AMejora* InventoryItem)
+{
+	InventoryItem->AgarrarMejora();
+	Mejora->AddToInventory(InventoryItem);
+}
+
 void ABuilderLabPawn::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit)
 {
+	AObjetoPrueba* InventoryItem = Cast<AObjetoPrueba>(Other);
+	if (InventoryItem != nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, TEXT("Energia: " + FString::FromInt(energia)));
+		energia -= 10;
+	}
 	AMunicion* InventoryItemMunicion = Cast<AMunicion>(Other); 
 	if (InventoryItemMunicion != nullptr)
 	{
@@ -248,6 +287,12 @@ void ABuilderLabPawn::NotifyHit(UPrimitiveComponent* MyComp, AActor* Other, UPri
 	{
 		TakeItemMedicina(InventoryItemMedicina);
 		vida += 1;
+	}
+	AMejora* InventoryItemMejora = Cast<AMejora>(Other);
+	if (InventoryItemMejora != nullptr)
+	{
+		TakeItemMejora(InventoryItemMejora);
+		disparoMultiple = true;
 	}
 }
 

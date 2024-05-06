@@ -7,6 +7,7 @@
 #include "ComponenteGestion.h"
 #include "BuilderLabGameMode.generated.h"
 
+class AObjetoPrueba;
 
 UCLASS(MinimalAPI)
 class ABuilderLabGameMode : public AGameModeBase
@@ -20,6 +21,8 @@ private:
 	/*class AJefeAduanas* JefeAduanas;
 	class APaqueteroBalas* PaqueteroMunicion;
 	class APaqueteroVelocidad* PaqueteroVelocidad;*/
+
+	TArray<AActor*> ObjetosPrueba; 
 
 	UComponenteGestion* ComponenteGestion;
 
